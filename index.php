@@ -10,9 +10,11 @@ while(! feof($file)) {
   $assets = array();
   // print_r($nyData);
 }
-	print_r($nyData);
+	// print_r($nyData);
 	for($dataCount = 0; $dataCount < count($nyData); $dataCount++){
-		array_push($assets, $nyData[$dataCount]);
+		// array_push($assets, $nyData[$dataCount]);
+		print_r($assets, $nyData[$dataCount]['RoadwayName']);
+
 	}
 	// print_r($assets);
 
