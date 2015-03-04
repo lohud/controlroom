@@ -32,6 +32,8 @@
 	
 	<!-- Fontawesome -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400italic,300,700,300italic,400' rel='stylesheet' type='text/css'>
+
 	
 
 	<link rel="stylesheet" href="css/foundation.min.css" />
@@ -61,16 +63,16 @@ div {
         }
         
         #roadways{
-            width:33%;
+            width:100%%;
         }
         
         #cameras{
-            width:65%;
+            /*width:100%;*/
         }
         
         .camera{
             display:inline-block;
-            padding:20px;
+            padding:0px;
         }
 
 	</style>
@@ -80,8 +82,14 @@ div {
         
     
     <div class="row">
-	    <div id="roadways"></div>
-    	<div id="cameras"></div>
+    	<div class="large-2 columns">
+    		<div id="roadways"></div>
+    	</div>
+    	<div class="large-10 columns">
+    		<div class="large-12 columns" id="cameras" data-equalizer>
+    			<!-- <div id="cameras"></div> -->
+    		</ul>
+    	</div>
     </div>
 
 
@@ -121,13 +129,16 @@ div {
             $('#cameras').empty();
             for (var i=0, f=range.length; i<f;i++){
                 console.log(roaddata[range[i]].Url);
-                $('#cameras').append('<img class="camera" src="'+roaddata[range[i]].Url+'">');
+                $('#cameras').append('<div class="large-4 columns medium-6 small-12 nopad end" data-equalizer-watch><div class="camera cards"><paper-ripple class="recenteringTouch" fit></paper-ripple><div style="background-image:url('+roaddata[range[i]].Url+')"><img src="assets/canvas.png"></div><h1>'+roaddata[range[i]].Name+'</h1><p>Test</p><p>Test line 2</p></div></div>');
                 
             }
         })
 
 	</script>
+	<script src="js/vendor/jquery.js"></script>
 	<script src="js/foundation.min.js"></script>
+	<script src="js/foundation/foundation.equalizer.js"></script>
+
 	<script>
 	  $(document).foundation();
 	</script>
