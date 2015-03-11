@@ -77,12 +77,40 @@
             width:300px;
         }
 
+        #banner {
+            border-image-outset: 0px;
+            border-image-repeat: stretch;
+            border-image-slice: 100%;
+            border-image-source: none;
+            border-image-width: 1;
+            border-color: rgb(34, 34, 34);
+            border-style: none;
+            border-width: 0px;
+            box-sizing: border-box;
+            color: rgb(34, 34, 34);
+            display: block;
+            height: 77px;
+            line-height: 18px;
+            margin: 0px;
+            padding: 0px;
+            vertical-align: baseline;
+        }
+
+        #banner img {
+            min-width: 0px !important;
+        }
     </style>
 </head>
 <body>
     <!--**********Content starts**********-->
-        
-    
+    <div id='banner'></div>
+      <script>
+      if(window.self==window.top) {
+        var banner = document.getElementById("banner");
+        banner.style.backgroundColor = "black"; 
+        banner.innerHTML = "<a href='http://www.lohud.com'><img src='http://data.lohud.com/lohud%20logos/site-masthead-logo.png' width='300' /></a><br>";
+      }
+      </script>    
     <div class="row">
         <div class="large-2 columns nopad">
             <!-- <h1 class="textnopad">Type or select the roadway</h1> -->
@@ -91,7 +119,14 @@
         <div class="large-10 columns">
             <div class="large-12 columns" id="cameras" data-equalizer>
                 <!-- <div id="cameras"></div> -->
-            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="max-width:100%;" id="footer">
+        <div class="large-12 columns" id="main-footer">
+            <div id="main-footer-inner">
+            &copy;2015 lohud.com. All rights reserved. Questions or comments? Email <a href="mailto:jteoh@lohud.com">jteoh@lohud.com</a>. Users of this site agree to the <a target="_top" href="http://static.lohud.com/terms/">Terms of Service</a>, <a target="_top" href="http://static.lohud.com/privacy/">Privacy Notice</a>, and <a target="_top" href="http://static.lohud.com/privacy/#adchoices">Ad Choices</a>
+            </div>
         </div>
     </div>
 
@@ -142,6 +177,18 @@
     </script>
     <script>
       $(document).foundation();
+       $(window).bind("load", function () {
+          var footer = $("#footer");
+          var pos = footer.position();
+          var height = $(window).height();
+          height = height - pos.top;
+          height = height - footer.height();
+          if (height > 0) {
+              footer.css({
+                  'margin-top': height + 'px'
+              });
+          }
+      });
     </script>
 </body>
 </html>
