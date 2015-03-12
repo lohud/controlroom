@@ -111,6 +111,7 @@
         banner.innerHTML = "<a href='http://www.lohud.com'><img src='http://data.lohud.com/lohud%20logos/site-masthead-logo.png' width='300' /></a><br>";
       }
       </script>    
+      <div class="row"><h1 id="responseArea"></h1></div>
     <div class="row">
         <div class="large-2 columns nopad">
             <!-- <h1 class="textnopad">Type or select the roadway</h1> -->
@@ -134,6 +135,10 @@
     <!--**********Content ends**********-->
 
     <script>
+
+        $.ajax({
+           url: "data.php",
+         });
         
         var roadindex = {},
         roaddata;
