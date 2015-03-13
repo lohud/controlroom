@@ -19,12 +19,12 @@ App itself now pulls cameras fine and is responsive.
 What's NOT working
 ==============
 
-~~App currently makes two separate calls and pings 511NY's api far too often. Also there's little need to constantly check for updated cameras as that rarely (if ever) changes.
+~~App currently makes two separate calls and pings 511NY's api far too often. Also there's little need to constantly check for updated cameras as that rarely (if ever) changes.~~
 
 To-do
 ==============
 
-~~* Fix API calls instead of constant-pinging
+* ~~Fix API calls instead of constant-pinging~~
 * Create alerts for traffic/weather emergencies
 * Turn off writing camera roadway json
 
