@@ -1,14 +1,18 @@
 
 <!Doctype HTML>
 <html>
+<!--**********************************************
+* Traffic  images from 511ny. Made by Kai Teoh   *
+**************************************************
+-->
 <head>
     <title></title>
     <meta charset="utf-8">
-    <meta name="title" content="" >
-    <meta name="description" content="">
+    <meta name="title" content="Lohud Traffic Control Room" >
+    <meta name="description" content="View traffic cameras from and around NY">
     
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Lohud Traffic Control Room">
+    <meta property="og:description" content="View traffic cameras from and around NY">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
     <meta property="og:type" content="website">
@@ -138,6 +142,7 @@
 
         $.ajax({
            url: "data.php",
+           success: console.log('YES'),
          });
         
         var roadindex = {},
