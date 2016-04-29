@@ -1,9 +1,7 @@
 Lohud Traffic "Control Room"
 ==============
 
-This is NOT ready for prime time yet.
-
-App is meant to pull in traffic cameras from 511ny and allow users to view them by roadways. Additionally, app is meant to pull weather or traffic-related emergencies or data and show alerts when those exist.
+App currently pulls from 511NY api and caches some images (from ny.thruway.gov, similar to our Traffic Cam map app). A php script that queries the api, caches images and writes to newcams.json is still required
 
 
 Project code
@@ -26,7 +24,7 @@ To-do
 
 * ~~Fix API calls instead of constant-pinging~~
 * Create alerts for traffic/weather emergencies
-* Turn off writing camera roadway json
+* ~~Turn off writing camera roadway json~~
 
 
 Contributors
